@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18888B7025D1D9920022A659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B6F25D1D9920022A659 /* AppDelegate.swift */; };
+		18888B7225D1D9920022A659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B7125D1D9920022A659 /* SceneDelegate.swift */; };
+		18888B7425D1D9920022A659 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B7325D1D9920022A659 /* ViewController.swift */; };
+		18888B7725D1D9920022A659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18888B7525D1D9920022A659 /* Main.storyboard */; };
+		18888B7925D1D9930022A659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18888B7825D1D9930022A659 /* Assets.xcassets */; };
+		18888B7C25D1D9930022A659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18888B7A25D1D9930022A659 /* LaunchScreen.storyboard */; };
+		18888B8725D1D9930022A659 /* Car2HandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B8625D1D9930022A659 /* Car2HandTests.swift */; };
+		18888B9225D1D9930022A659 /* Car2HandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B9125D1D9930022A659 /* Car2HandUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18888B8325D1D9930022A659 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18888B6425D1D9920022A659 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18888B6B25D1D9920022A659;
+			remoteInfo = Car2Hand;
+		};
+		18888B8E25D1D9930022A659 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18888B6425D1D9920022A659 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18888B6B25D1D9920022A659;
+			remoteInfo = Car2Hand;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18888B6C25D1D9920022A659 /* Car2Hand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Car2Hand.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18888B6F25D1D9920022A659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18888B7125D1D9920022A659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		18888B7325D1D9920022A659 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18888B7625D1D9920022A659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18888B7825D1D9930022A659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18888B7B25D1D9930022A659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18888B7D25D1D9930022A659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18888B8225D1D9930022A659 /* Car2HandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Car2HandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18888B8625D1D9930022A659 /* Car2HandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car2HandTests.swift; sourceTree = "<group>"; };
+		18888B8825D1D9930022A659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18888B8D25D1D9930022A659 /* Car2HandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Car2HandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18888B9125D1D9930022A659 /* Car2HandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car2HandUITests.swift; sourceTree = "<group>"; };
+		18888B9325D1D9930022A659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18888B6925D1D9920022A659 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18888B7F25D1D9930022A659 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18888B8A25D1D9930022A659 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18888B6325D1D9920022A659 = {
+			isa = PBXGroup;
+			children = (
+				18888B6E25D1D9920022A659 /* Car2Hand */,
+				18888B8525D1D9930022A659 /* Car2HandTests */,
+				18888B9025D1D9930022A659 /* Car2HandUITests */,
+				18888B6D25D1D9920022A659 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18888B6D25D1D9920022A659 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18888B6C25D1D9920022A659 /* Car2Hand.app */,
+				18888B8225D1D9930022A659 /* Car2HandTests.xctest */,
+				18888B8D25D1D9930022A659 /* Car2HandUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18888B6E25D1D9920022A659 /* Car2Hand */ = {
+			isa = PBXGroup;
+			children = (
+				18888B6F25D1D9920022A659 /* AppDelegate.swift */,
+				18888B7125D1D9920022A659 /* SceneDelegate.swift */,
+				18888B7325D1D9920022A659 /* ViewController.swift */,
+				18888B7525D1D9920022A659 /* Main.storyboard */,
+				18888B7825D1D9930022A659 /* Assets.xcassets */,
+				18888B7A25D1D9930022A659 /* LaunchScreen.storyboard */,
+				18888B7D25D1D9930022A659 /* Info.plist */,
+			);
+			path = Car2Hand;
+			sourceTree = "<group>";
+		};
+		18888B8525D1D9930022A659 /* Car2HandTests */ = {
+			isa = PBXGroup;
+			children = (
+				18888B8625D1D9930022A659 /* Car2HandTests.swift */,
+				18888B8825D1D9930022A659 /* Info.plist */,
+			);
+			path = Car2HandTests;
+			sourceTree = "<group>";
+		};
+		18888B9025D1D9930022A659 /* Car2HandUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18888B9125D1D9930022A659 /* Car2HandUITests.swift */,
+				18888B9325D1D9930022A659 /* Info.plist */,
+			);
+			path = Car2HandUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18888B6B25D1D9920022A659 /* Car2Hand */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18888B9625D1D9930022A659 /* Build configuration list for PBXNativeTarget "Car2Hand" */;
+			buildPhases = (
+				18888B6825D1D9920022A659 /* Sources */,
+				18888B6925D1D9920022A659 /* Frameworks */,
+				18888B6A25D1D9920022A659 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Car2Hand;
+			productName = Car2Hand;
+			productReference = 18888B6C25D1D9920022A659 /* Car2Hand.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18888B8125D1D9930022A659 /* Car2HandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18888B9925D1D9930022A659 /* Build configuration list for PBXNativeTarget "Car2HandTests" */;
+			buildPhases = (
+				18888B7E25D1D9930022A659 /* Sources */,
+				18888B7F25D1D9930022A659 /* Frameworks */,
+				18888B8025D1D9930022A659 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18888B8425D1D9930022A659 /* PBXTargetDependency */,
+			);
+			name = Car2HandTests;
+			productName = Car2HandTests;
+			productReference = 18888B8225D1D9930022A659 /* Car2HandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18888B8C25D1D9930022A659 /* Car2HandUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18888B9C25D1D9930022A659 /* Build configuration list for PBXNativeTarget "Car2HandUITests" */;
+			buildPhases = (
+				18888B8925D1D9930022A659 /* Sources */,
+				18888B8A25D1D9930022A659 /* Frameworks */,
+				18888B8B25D1D9930022A659 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18888B8F25D1D9930022A659 /* PBXTargetDependency */,
+			);
+			name = Car2HandUITests;
+			productName = Car2HandUITests;
+			productReference = 18888B8D25D1D9930022A659 /* Car2HandUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18888B6425D1D9920022A659 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					18888B6B25D1D9920022A659 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					18888B8125D1D9930022A659 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 18888B6B25D1D9920022A659;
+					};
+					18888B8C25D1D9930022A659 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 18888B6B25D1D9920022A659;
+					};
+				};
+			};
+			buildConfigurationList = 18888B6725D1D9920022A659 /* Build configuration list for PBXProject "Car2Hand" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18888B6325D1D9920022A659;
+			productRefGroup = 18888B6D25D1D9920022A659 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18888B6B25D1D9920022A659 /* Car2Hand */,
+				18888B8125D1D9930022A659 /* Car2HandTests */,
+				18888B8C25D1D9930022A659 /* Car2HandUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18888B6A25D1D9920022A659 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18888B7C25D1D9930022A659 /* LaunchScreen.storyboard in Resources */,
+				18888B7925D1D9930022A659 /* Assets.xcassets in Resources */,
+				18888B7725D1D9920022A659 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18888B8025D1D9930022A659 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18888B8B25D1D9930022A659 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18888B6825D1D9920022A659 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18888B7425D1D9920022A659 /* ViewController.swift in Sources */,
+				18888B7025D1D9920022A659 /* AppDelegate.swift in Sources */,
+				18888B7225D1D9920022A659 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18888B7E25D1D9930022A659 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18888B8725D1D9930022A659 /* Car2HandTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18888B8925D1D9930022A659 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18888B9225D1D9930022A659 /* Car2HandUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18888B8425D1D9930022A659 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18888B6B25D1D9920022A659 /* Car2Hand */;
+			targetProxy = 18888B8325D1D9930022A659 /* PBXContainerItemProxy */;
+		};
+		18888B8F25D1D9930022A659 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18888B6B25D1D9920022A659 /* Car2Hand */;
+			targetProxy = 18888B8E25D1D9930022A659 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18888B7525D1D9920022A659 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18888B7625D1D9920022A659 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18888B7A25D1D9930022A659 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18888B7B25D1D9930022A659 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18888B9425D1D9930022A659 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18888B9525D1D9930022A659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18888B9725D1D9930022A659 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6TXNR8TL5;
+				INFOPLIST_FILE = Car2Hand/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bahadirseyfi.Car2Hand;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18888B9825D1D9930022A659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6TXNR8TL5;
+				INFOPLIST_FILE = Car2Hand/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bahadirseyfi.Car2Hand;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18888B9A25D1D9930022A659 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6TXNR8TL5;
+				INFOPLIST_FILE = Car2HandTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bahadirseyfi.Car2HandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Car2Hand.app/Car2Hand";
+			};
+			name = Debug;
+		};
+		18888B9B25D1D9930022A659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6TXNR8TL5;
+				INFOPLIST_FILE = Car2HandTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bahadirseyfi.Car2HandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Car2Hand.app/Car2Hand";
+			};
+			name = Release;
+		};
+		18888B9D25D1D9930022A659 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6TXNR8TL5;
+				INFOPLIST_FILE = Car2HandUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bahadirseyfi.Car2HandUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Car2Hand;
+			};
+			name = Debug;
+		};
+		18888B9E25D1D9930022A659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6TXNR8TL5;
+				INFOPLIST_FILE = Car2HandUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bahadirseyfi.Car2HandUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Car2Hand;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18888B6725D1D9920022A659 /* Build configuration list for PBXProject "Car2Hand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18888B9425D1D9930022A659 /* Debug */,
+				18888B9525D1D9930022A659 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18888B9625D1D9930022A659 /* Build configuration list for PBXNativeTarget "Car2Hand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18888B9725D1D9930022A659 /* Debug */,
+				18888B9825D1D9930022A659 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18888B9925D1D9930022A659 /* Build configuration list for PBXNativeTarget "Car2HandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18888B9A25D1D9930022A659 /* Debug */,
+				18888B9B25D1D9930022A659 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18888B9C25D1D9930022A659 /* Build configuration list for PBXNativeTarget "Car2HandUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18888B9D25D1D9930022A659 /* Debug */,
+				18888B9E25D1D9930022A659 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18888B6425D1D9920022A659 /* Project object */;
+}
