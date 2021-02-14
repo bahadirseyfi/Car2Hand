@@ -22,12 +22,12 @@ class CarsWebServices {
     
     var baseURL: String { "https://sandbox.arabamd.com/api/v1/" }
     enum Path: String {
-        case cars = "listing?sort=1&sortDirection=0&take=10"
+        case cars = "listing?"
         case details
     }
     
-    func loadAllCars(success: (([Cars])->Void)?, fail: ((Error?)->Void)?) {
-        let request = createAllCarsRequest()
+    func loadAllCars(page: Int, success: (([Cars])->Void)?, fail: ((Error?)->Void)?) {
+        let request = createAllCarsRequest(for: page)
         WebService.service.sendByRequestBy(urlRequest: request, success: { json in
             let response = CarsResponse(dictionary: json)
             success?(response?.cars ?? [] )
@@ -36,8 +36,11 @@ class CarsWebServices {
 }
 
 extension CarsWebServices {
-    func createAllCarsRequest()->URLRequest {
-        let urlString = baseURL + Path.cars.rawValue
+    func createAllCarsRequest(for page: Int)->URLRequest {
+        
+        //let eventRequest = CarsRequest()
+        let intPage = String(page)
+        let urlString = baseURL + Path.cars.rawValue + "take=" + intPage
         let url = URL(string: urlString)!
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 20)
         request.httpMethod = HTTPMethods.get.rawValue

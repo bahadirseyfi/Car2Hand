@@ -10,8 +10,9 @@ import Foundation
 class AllCarsInteractor {
     var cars: [Cars] = []
     
-    func fetchCars(completion: (()->Void)?){
-        CarsWebServices.service.loadAllCars(success: { cars in
+    
+    func fetchCars(page:Int, completion: (()->Void)?){
+        CarsWebServices.service.loadAllCars(page: page, success: { cars in
             self.cars = cars
             completion?()
         }, fail: { error in

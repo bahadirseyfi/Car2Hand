@@ -11,7 +11,7 @@ class AllCarsViewController: UIViewController {
     
     private var interactor: AllCarsInteractor = AllCarsInteractor()
     private var currentCar: Cars?
-    
+    private var page = 10
     @IBOutlet weak var tableView: UITableView?
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class AllCarsViewController: UIViewController {
     }
     
     private func setupUI(){
-        interactor.fetchCars(completion: {
+        interactor.fetchCars(page: page, completion: {
             self.tableView?.reloadData()
         })
     }
@@ -48,4 +48,17 @@ extension AllCarsViewController: UITableViewDelegate, UITableViewDataSource{
         120
     }
 
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        if scrollView.contentOffset.y > scrollView.contentSize.height - scrollView.frame.height {
+            if page < 16 {
+            page += 4
+                interactor.fetchCars(page: page, completion: {
+                    self.tableView?.reloadData()
+                    })
+            } else {
+                print("Maksimum sorguya ulaştınız")
+            }
+        }
+    }
 }
