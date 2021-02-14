@@ -12,7 +12,6 @@ class AllCarsInteractor {
     
     func fetchCars(completion: (()->Void)?){
         CarsWebServices.service.loadAllCars(success: { cars in
-            print(cars)
             self.cars = cars
             completion?()
         }, fail: { error in

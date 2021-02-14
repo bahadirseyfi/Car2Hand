@@ -17,6 +17,8 @@
 		181BC5B225D9637300C91840 /* AllCarsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC5B125D9637300C91840 /* AllCarsInteractor.swift */; };
 		181BC5B725D9647D00C91840 /* AllCarsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC5B625D9647D00C91840 /* AllCarsCell.swift */; };
 		181BC5C025D97DA700C91840 /* ModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC5BF25D97DA700C91840 /* ModelProtocols.swift */; };
+		181BC5C825D9A3B800C91840 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC5C725D9A3B800C91840 /* UIImageViewExtension.swift */; };
+		181BC5CD25D9A8B800C91840 /* FormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC5CC25D9A8B800C91840 /* FormatterExtension.swift */; };
 		18888B7025D1D9920022A659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B6F25D1D9920022A659 /* AppDelegate.swift */; };
 		18888B7225D1D9920022A659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B7125D1D9920022A659 /* SceneDelegate.swift */; };
 		18888B7725D1D9920022A659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18888B7525D1D9920022A659 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		181BC5B125D9637300C91840 /* AllCarsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCarsInteractor.swift; sourceTree = "<group>"; };
 		181BC5B625D9647D00C91840 /* AllCarsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCarsCell.swift; sourceTree = "<group>"; };
 		181BC5BF25D97DA700C91840 /* ModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocols.swift; sourceTree = "<group>"; };
+		181BC5C725D9A3B800C91840 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		181BC5CC25D9A8B800C91840 /* FormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterExtension.swift; sourceTree = "<group>"; };
 		18888B6C25D1D9920022A659 /* Car2Hand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Car2Hand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18888B6F25D1D9920022A659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18888B7125D1D9920022A659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				181BC59025D94F6000C91840 /* DictionaryExtension.swift */,
+				181BC5C725D9A3B800C91840 /* UIImageViewExtension.swift */,
+				181BC5CC25D9A8B800C91840 /* FormatterExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -339,11 +345,13 @@
 				181BC5AA25D9634A00C91840 /* AllCarsViewController.swift in Sources */,
 				181BC59E25D9527100C91840 /* CarsWebServices.swift in Sources */,
 				181BC58825D94B8400C91840 /* Cars.swift in Sources */,
+				181BC5CD25D9A8B800C91840 /* FormatterExtension.swift in Sources */,
 				181BC59125D94F6000C91840 /* DictionaryExtension.swift in Sources */,
 				181BC57E25D9483200C91840 /* WebService.swift in Sources */,
 				181BC5A325D95FFB00C91840 /* CarsRequest.swift in Sources */,
 				181BC5C025D97DA700C91840 /* ModelProtocols.swift in Sources */,
 				181BC5B225D9637300C91840 /* AllCarsInteractor.swift in Sources */,
+				181BC5C825D9A3B800C91840 /* UIImageViewExtension.swift in Sources */,
 				18888B7225D1D9920022A659 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

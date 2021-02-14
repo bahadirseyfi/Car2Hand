@@ -44,5 +44,8 @@ extension AllCarsViewController: UITableViewDelegate, UITableViewDataSource{
         cell.setupUI(for: car)
         return cell
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        120
+    }
 
 }
