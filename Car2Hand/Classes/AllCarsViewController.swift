@@ -12,6 +12,7 @@ class AllCarsViewController: UIViewController {
     private var interactor: AllCarsInteractor = AllCarsInteractor()
     private var page = 10
     @IBOutlet weak var tableView: UITableView?
+    @IBOutlet weak var textFieldSearch: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +21,14 @@ class AllCarsViewController: UIViewController {
     }
     
     private func setupUI(){
+        textFieldSearch?.addTarget(self, action: #selector(textFieldDidChanged(_:)), for: .editingChanged)
         interactor.fetchCars(page: page, completion: {
             self.tableView?.reloadData()
         })
     }
     private func redirectTo(car: Cars) {
-        
+        self.view.endEditing(true)
+        textFieldSearch?.text = nil
         let viewController = DetailViewController.instantiateViewController(with: "DetailViewController")
         viewController.initialize(with: car)
         print("car : ",car)
@@ -41,19 +44,19 @@ extension AllCarsViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return interactor.cars.count
+        return interactor.filteredCar.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllCarsCell") as! AllCarsCell
-        let car = interactor.cars[indexPath.row]
+        let car = interactor.filteredCar[indexPath.row]
         cell.setupUI(for: car)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let league = interactor.cars[indexPath.row]
-        redirectTo(car: league)
+        let car = interactor.filteredCar[indexPath.row]
+        redirectTo(car: car)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -72,5 +75,18 @@ extension AllCarsViewController: UITableViewDelegate, UITableViewDataSource{
                 print("Maksimum sorguya ulaştınız")
             }
         }
+    }
+}
+extension AllCarsViewController : UITextFieldDelegate {
+    
+    @objc func textFieldDidChanged(_ sender: UITextField) {
+        interactor.filterAllCars(by: textFieldSearch?.text, completion: {
+            self.tableView?.reloadData()
+        })
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

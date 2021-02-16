@@ -32,14 +32,17 @@ class Cars {
         model_ismi = dictionary.decode(key: Keys.model_ismi.rawValue)
         fiyat = dictionary.decode(key: Keys.fiyat.rawValue) ?? 0
         image = dictionary.decode(key: Keys.image.rawValue)
-        location = dictionary.decode(key: Keys.location.rawValue)
+     // location = dictionary.decode(key: Keys.location.rawValue)
+    
+        if let dictionaryJSON = dictionary["location"] as? [String:Any] {
+            location = Location(dictionary: dictionaryJSON)
+        }
     }
 }
 // MARK: - Location
 
-//LOCATION BÖLÜMÜNE ULAŞAMIYORUM 
-
 class Location {
+    
     var cityName: String?
     var townName: String?
     
@@ -54,16 +57,4 @@ class Location {
         cityName = dictionary.decode(key: Keys.cityName.rawValue)
         townName = dictionary.decode(key: Keys.townName.rawValue)
     }
-    
 }
-
-/*
-class Location {
-    var cityName, townName: String?
-
-    init(cityName: String?, townName: String?) {
-        self.cityName = cityName
-        self.townName = townName
-    }
-}
-*/

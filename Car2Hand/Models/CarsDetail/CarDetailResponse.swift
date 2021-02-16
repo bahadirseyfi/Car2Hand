@@ -18,10 +18,16 @@ class CarDetailResponse : Initializer {
     required init(){}
     required init?(dictionary: [String:Any]?) {
         guard let dictionary = dictionary else { return nil }
+            
+        if let car = CarDetail(dictionary: dictionary){
+            self.cars = car
+        }
+        /*
         if let cars: [String:Any] = dictionary.decode(key: Keys.root.rawValue) {
                 if let car = CarDetail(dictionary: cars) {
                     self.cars = car
             }
         }
+ */
     }
 }

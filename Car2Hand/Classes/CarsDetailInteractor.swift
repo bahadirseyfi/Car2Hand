@@ -15,7 +15,6 @@ class CarsDetailInteractor {
         CarsWebServices.service.loadCarDetail(of: car, success: { details in
             self.detail = details
             completion?()
-           
         }, fail:{ error in
             completion?()
             })

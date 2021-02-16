@@ -29,10 +29,10 @@
 		18888B9225D1D9930022A659 /* Car2HandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B9125D1D9930022A659 /* Car2HandUITests.swift */; };
 		18DA69F225DA75DD0082B1A4 /* CarDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA69F125DA75DD0082B1A4 /* CarDetailRequest.swift */; };
 		18DA69FA25DA7CBF0082B1A4 /* CarDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA69F925DA7CBF0082B1A4 /* CarDetailResponse.swift */; };
-		18DA6A0225DA88490082B1A4 /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA6A0125DA88490082B1A4 /* CarDetailViewController.swift */; };
 		18DA6A0825DA88FF0082B1A4 /* CarsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA6A0725DA88FF0082B1A4 /* CarsDetailInteractor.swift */; };
 		18DA6A0D25DA8FBD0082B1A4 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA6A0C25DA8FBD0082B1A4 /* UIViewControllerExtension.swift */; };
 		18DA6A1225DAAEC40082B1A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA6A1125DAAEC40082B1A4 /* DetailViewController.swift */; };
+		18DA6A2025DC22360082B1A4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA6A1F25DC22360082B1A4 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +81,10 @@
 		18888B9325D1D9930022A659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DA69F125DA75DD0082B1A4 /* CarDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailRequest.swift; sourceTree = "<group>"; };
 		18DA69F925DA7CBF0082B1A4 /* CarDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailResponse.swift; sourceTree = "<group>"; };
-		18DA6A0125DA88490082B1A4 /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
 		18DA6A0725DA88FF0082B1A4 /* CarsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsDetailInteractor.swift; sourceTree = "<group>"; };
 		18DA6A0C25DA8FBD0082B1A4 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		18DA6A1125DAAEC40082B1A4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		18DA6A1F25DC22360082B1A4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +137,7 @@
 				181BC5C725D9A3B800C91840 /* UIImageViewExtension.swift */,
 				181BC5CC25D9A8B800C91840 /* FormatterExtension.swift */,
 				18DA6A0C25DA8FBD0082B1A4 /* UIViewControllerExtension.swift */,
+				18DA6A1F25DC22360082B1A4 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,7 +147,6 @@
 			children = (
 				181BC5A925D9634A00C91840 /* AllCarsViewController.swift */,
 				181BC5B125D9637300C91840 /* AllCarsInteractor.swift */,
-				18DA6A0125DA88490082B1A4 /* CarDetailViewController.swift */,
 				18DA6A0725DA88FF0082B1A4 /* CarsDetailInteractor.swift */,
 				18DA6A1125DAAEC40082B1A4 /* DetailViewController.swift */,
 			);
@@ -392,9 +392,9 @@
 				18DA6A0D25DA8FBD0082B1A4 /* UIViewControllerExtension.swift in Sources */,
 				181BC5A325D95FFB00C91840 /* CarsRequest.swift in Sources */,
 				181BC5C025D97DA700C91840 /* ModelProtocols.swift in Sources */,
-				18DA6A0225DA88490082B1A4 /* CarDetailViewController.swift in Sources */,
 				181BC5B225D9637300C91840 /* AllCarsInteractor.swift in Sources */,
 				181BC5C825D9A3B800C91840 /* UIImageViewExtension.swift in Sources */,
+				18DA6A2025DC22360082B1A4 /* UIViewExtension.swift in Sources */,
 				18DA6A0825DA88FF0082B1A4 /* CarsDetailInteractor.swift in Sources */,
 				18888B7225D1D9920022A659 /* SceneDelegate.swift in Sources */,
 			);
