@@ -10,7 +10,7 @@ import Foundation
 
 class Cars {
     
-    let ID: Int?
+    var ID: Int?
     var baslik: String?
     var model_ismi: String?
     var fiyat: Int?
@@ -25,10 +25,8 @@ class Cars {
         case image = "photo"
         case location = "location"
     }
-    
     required init?(dictionary: [String : Any]?) {
         guard let dictionary = dictionary else { return nil }
-        
         ID = dictionary.decode(key: Keys.ID.rawValue)
         baslik = dictionary.decode(key: Keys.baslik.rawValue)
         model_ismi = dictionary.decode(key: Keys.model_ismi.rawValue)
@@ -37,38 +35,14 @@ class Cars {
         location = dictionary.decode(key: Keys.location.rawValue)
     }
 }
-
-/*
-class Location {
-    
-    var sehir: String?
-    var ilce: String?
-
-    enum Keys: String, CodingKey {
-        case sehir = "cityName"
-        case ilce = "townName"
-    }
-    
-    required init?(dictionary: [String : Any]?) {
-        guard let dictionary = dictionary else { return nil }
-        
-        sehir = dictionary.decode(key: Keys.sehir.rawValue)
-        ilce = dictionary.decode(key: Keys.ilce.rawValue)
-    }
-}
-*/
-
 // MARK: - Location
+
+//LOCATION BÖLÜMÜNE ULAŞAMIYORUM 
+
 class Location {
     var cityName: String?
     var townName: String?
-
-    /*
-    init(cityName: String?, townName: String?) {
-        self.cityName = cityName
-        self.townName = townName
-    }
-    */
+    
     enum Keys: String, CodingKey {
         case cityName = "cityName"
         case townName = "townName"
@@ -82,3 +56,14 @@ class Location {
     }
     
 }
+
+/*
+class Location {
+    var cityName, townName: String?
+
+    init(cityName: String?, townName: String?) {
+        self.cityName = cityName
+        self.townName = townName
+    }
+}
+*/

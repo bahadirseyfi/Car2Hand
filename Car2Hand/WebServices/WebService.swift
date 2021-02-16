@@ -23,7 +23,7 @@ class WebService {
         Swift.print(string)
     }
     
-    func sendByRequestBy(urlRequest: URLRequest, success: (([String:Any]?)->Void)?, failure: ((Error?)->Void)?) {
+    func sendRequestBy(urlRequest: URLRequest, success: (([String:Any]?)->Void)?, failure: ((Error?)->Void)?) {
         let session = URLSession.shared
         session.dataTask(with: urlRequest) { (data, response, error) in
             DispatchQueue.main.async {
@@ -31,7 +31,7 @@ class WebService {
                     failure?(error)
                 }
                 else if let data = data {
-                    self.printData(data: data)
+//                    self.printData(data: data)
                     let code = (response as? HTTPURLResponse)?.statusCode ?? 0
                     if code >= 200, code < 300 {
                         if let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:Any] {

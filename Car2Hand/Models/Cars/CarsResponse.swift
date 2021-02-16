@@ -17,10 +17,9 @@ class CarsResponse : Initializer {
     
     required init(){}
     required init?(dictionary: [String:Any]?) {
-        guard let dictionary = dictionary else { print("DEĞİLLLL"); return nil}
+        guard let dictionary = dictionary else { return nil }
         if let cars: [[String:Any]] = dictionary.decode(key: Keys.root.rawValue) {
             for each in cars {
-               
                 if let car = Cars(dictionary: each) {
                     self.cars.append(car)
                 }

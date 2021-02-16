@@ -10,7 +10,6 @@ import UIKit
 class AllCarsViewController: UIViewController {
     
     private var interactor: AllCarsInteractor = AllCarsInteractor()
-    private var currentCar: Cars?
     private var page = 10
     @IBOutlet weak var tableView: UITableView?
     
@@ -25,7 +24,14 @@ class AllCarsViewController: UIViewController {
             self.tableView?.reloadData()
         })
     }
-
+    private func redirectTo(car: Cars) {
+        
+        let viewController = DetailViewController.instantiateViewController(with: "DetailViewController")
+        viewController.initialize(with: car)
+        print("car : ",car)
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 }
 extension AllCarsViewController: UITableViewDelegate, UITableViewDataSource{
     
@@ -44,6 +50,12 @@ extension AllCarsViewController: UITableViewDelegate, UITableViewDataSource{
         cell.setupUI(for: car)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let league = interactor.cars[indexPath.row]
+        redirectTo(car: league)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }

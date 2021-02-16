@@ -31,7 +31,7 @@ class AllCarsCell: UITableViewCell {
         carPriceLabel?.text = String(car.fiyat!.formattedWithSeparator) + "₺"
         titleLabel?.text = car.baslik
         
-        //locationLabel?.text = car.location?.cityName
+        locationLabel?.text = car.location?.cityName
     }
 
 
