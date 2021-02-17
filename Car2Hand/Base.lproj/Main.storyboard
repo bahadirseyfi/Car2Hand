@@ -771,29 +771,47 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1aD-oS-REc">
-                                <rect key="frame" x="50" y="290" width="314" height="262"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aD-oS-REc">
+                                <rect key="frame" x="50" y="200" width="314" height="352"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mk5-q4-ar7">
-                                        <rect key="frame" x="0.0" y="94" width="314" height="168"/>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mk5-q4-ar7">
+                                        <rect key="frame" x="0.0" y="94" width="314" height="258"/>
                                     </mapView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aH-P4-hjo">
+                                        <rect key="frame" x="100" y="36" width="114.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.021380823109999999" green="0.40501627330000001" blue="0.81353425980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Mk5-q4-ar7" firstAttribute="top" secondItem="1aD-oS-REc" secondAttribute="top" constant="94" id="BHx-Lj-5G7"/>
                                     <constraint firstAttribute="trailing" secondItem="Mk5-q4-ar7" secondAttribute="trailing" id="OPo-Ro-zfG"/>
+                                    <constraint firstItem="0aH-P4-hjo" firstAttribute="centerX" secondItem="1aD-oS-REc" secondAttribute="centerX" id="bC7-b4-VkS"/>
                                     <constraint firstItem="Mk5-q4-ar7" firstAttribute="leading" secondItem="1aD-oS-REc" secondAttribute="leading" id="dvG-pF-0WW"/>
+                                    <constraint firstItem="Mk5-q4-ar7" firstAttribute="top" secondItem="0aH-P4-hjo" secondAttribute="bottom" constant="27" id="gtd-er-U70"/>
                                     <constraint firstAttribute="bottom" secondItem="Mk5-q4-ar7" secondAttribute="bottom" id="ipp-kq-xHX"/>
+                                    <constraint firstItem="0aH-P4-hjo" firstAttribute="top" secondItem="1aD-oS-REc" secondAttribute="top" constant="36" id="rmb-BT-Qb1"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dpO-bE-2OL"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="dpO-bE-2OL" firstAttribute="bottom" secondItem="1aD-oS-REc" secondAttribute="bottom" constant="256" id="NI1-lh-iXw"/>
+                            <constraint firstItem="dpO-bE-2OL" firstAttribute="trailing" secondItem="1aD-oS-REc" secondAttribute="trailing" constant="50" id="ZGr-ne-YT0"/>
                             <constraint firstItem="UNL-iu-O2r" firstAttribute="trailing" secondItem="dpO-bE-2OL" secondAttribute="trailing" id="feP-Mu-lLb"/>
+                            <constraint firstItem="1aD-oS-REc" firstAttribute="top" secondItem="dpO-bE-2OL" secondAttribute="top" constant="200" id="iZy-HD-2BS"/>
                             <constraint firstItem="UNL-iu-O2r" firstAttribute="top" secondItem="PX4-wm-Gf3" secondAttribute="top" id="lMu-f3-lvm"/>
                             <constraint firstItem="UNL-iu-O2r" firstAttribute="leading" secondItem="dpO-bE-2OL" secondAttribute="leading" id="mEL-qX-eKx"/>
                             <constraint firstAttribute="bottom" secondItem="UNL-iu-O2r" secondAttribute="bottom" id="qy5-Wy-Nih"/>
+                            <constraint firstItem="1aD-oS-REc" firstAttribute="leading" secondItem="dpO-bE-2OL" secondAttribute="leading" constant="50" id="tpu-Ep-vxH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GPF-Co-nLv"/>
