@@ -16,13 +16,28 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var modelLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var tarihLabel: UILabel!
+    @IBOutlet weak var markaLabel: UILabel!
+    @IBOutlet weak var motorType: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //titleLabel.text = currentCar?.baslik
+
         setupUI()
-       // webView.loadHTMLString(urlString, baseURL: nil)
+      
     }
+    
+    
+    
+    @IBAction func ilansahibiClicked(_ sender: UIButton) {
+        
+        print("tıklandı")
+    }
+    @IBAction func locationBtnClicked(_ sender: UIButton) {
+    }
+    
     
     func initialize(with car: Cars) {
         self.currentCar = car
@@ -31,9 +46,17 @@ class DetailViewController: UIViewController {
     func setupUI(){
         if let car = currentCar {
             interactor.fetchDetails(of: car, completion: {
-                self.titleLabel.text = self.interactor.detail?.userInfo?.nameSurname
+                self.titleLabel.text = self.interactor.detail?.category?.name
                // self.titleLabel.text = self.interactor.detail?.location?.cityName
                 self.carImage.setupImage(by: self.interactor.detail!.image![0], imageSize: "800x600")
+                self.priceLabel.text = String((self.interactor.detail?.fiyat!.formattedWithSeparator)!) + " TL"
+                
+                let motorWords = (self.interactor.detail?.model_ismi2?.wordList[1])! + "." + (self.interactor.detail?.model_ismi2?.wordList[2])! + " " + (self.interactor.detail?.model_ismi2?.wordList[3])!
+                
+                self.motorType.text = motorWords
+                self.markaLabel.text = "bmw"
+                self.modelLabel.text = (self.interactor.detail?.model_ismi2?.wordList[0])!
+                
                 let urlString = self.interactor.detail?.text
                 self.webView.loadHTMLString(urlString!, baseURL: nil)
             })
@@ -41,6 +64,6 @@ class DetailViewController: UIViewController {
             print("girmedi :(")
         }
     }
-        
+    
     
 }

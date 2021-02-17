@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181BAE6725DDB8B400E73378 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BAE6625DDB8B400E73378 /* StringExtension.swift */; };
 		181BC57E25D9483200C91840 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC57D25D9483200C91840 /* WebService.swift */; };
 		181BC58825D94B8400C91840 /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC58725D94B8400C91840 /* Cars.swift */; };
 		181BC59125D94F6000C91840 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC59025D94F6000C91840 /* DictionaryExtension.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181BAE6625DDB8B400E73378 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		181BC57D25D9483200C91840 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		181BC58725D94B8400C91840 /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 		181BC59025D94F6000C91840 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				181BC5CC25D9A8B800C91840 /* FormatterExtension.swift */,
 				18DA6A0C25DA8FBD0082B1A4 /* UIViewControllerExtension.swift */,
 				18DA6A1F25DC22360082B1A4 /* UIViewExtension.swift */,
+				181BAE6625DDB8B400E73378 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				181BC5C825D9A3B800C91840 /* UIImageViewExtension.swift in Sources */,
 				18DA6A2025DC22360082B1A4 /* UIViewExtension.swift in Sources */,
 				18DA6A0825DA88FF0082B1A4 /* CarsDetailInteractor.swift in Sources */,
+				181BAE6725DDB8B400E73378 /* StringExtension.swift in Sources */,
 				18888B7225D1D9920022A659 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +579,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6TXNR8TL5;
 				INFOPLIST_FILE = Car2Hand/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -594,6 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6TXNR8TL5;
 				INFOPLIST_FILE = Car2Hand/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

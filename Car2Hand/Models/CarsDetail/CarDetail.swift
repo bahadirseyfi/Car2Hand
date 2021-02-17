@@ -17,6 +17,7 @@ class CarDetail {
     var fiyat: Int?
     var tarih_format: String?
     var image: [String?]?
+    var category: CarCategory?
    // var properties: [Properties?]?
     var text: String?
     var userInfo: UserInfo?
@@ -29,7 +30,8 @@ class CarDetail {
         case tarih_format = "dateFormatted"
         case image = "photos"
         case location = "location"
-        case properties = "properties"
+        case category = "category"
+      //  case properties = "properties"
         case text = "text"
         case userInfo = "userInfo"
     }
@@ -43,6 +45,7 @@ class CarDetail {
         fiyat = dictionary.decode(key: Keys.fiyat.rawValue) ?? 0
         tarih_format = dictionary.decode(key: Keys.tarih_format.rawValue)
         image = dictionary.decode(key: Keys.image.rawValue) ?? []
+        category = dictionary.decode(key: Keys.category.rawValue)
         text = dictionary.decode(key: Keys.text.rawValue)
         
         if let dictionaryJSON = dictionary["userInfo"] as? [String:Any] {
@@ -50,6 +53,9 @@ class CarDetail {
         }
         if let dictionaryJSON2 = dictionary["location"] as? [String:Any] {
             location = Location(dictionary: dictionaryJSON2)
+        }
+        if let dictionaryJSON2 = dictionary["category"] as? [String:Any] {
+            category = CarCategory(dictionary: dictionaryJSON2)
         }
        // if let dictionaryJSON3 = dictionary["properties"] as? [String:Any] {
        //     properties = Properties(dictionary: dictionaryJSON3)
@@ -74,6 +80,24 @@ class Properties {
     }
 }
 */
+class CarCategory {
+    var ID: Int?
+    var name: String?
+    
+    enum Keys: String, CodingKey {
+        case ID = "id"
+        case name
+    }
+    required init?(dictionary: [String:Any]?) {
+        guard let dictionary = dictionary else { return nil }
+        ID = dictionary.decode(key: Keys.ID.rawValue)
+        name = dictionary.decode(key: Keys.name.rawValue)
+    }
+
+    
+}
+
+
 class UserInfo {
     
     var ID: Int?

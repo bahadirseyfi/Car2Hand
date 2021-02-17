@@ -25,6 +25,7 @@ class Cars {
         case image = "photo"
         case location = "location"
     }
+    
     required init?(dictionary: [String : Any]?) {
         guard let dictionary = dictionary else { return nil }
         ID = dictionary.decode(key: Keys.ID.rawValue)
