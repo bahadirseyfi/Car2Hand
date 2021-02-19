@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		181BAE6725DDB8B400E73378 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BAE6625DDB8B400E73378 /* StringExtension.swift */; };
+		181BB21425DFDEE00080B88B /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BB21325DFDEE00080B88B /* PersonDetailViewController.swift */; };
 		181BC57E25D9483200C91840 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC57D25D9483200C91840 /* WebService.swift */; };
 		181BC58825D94B8400C91840 /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC58725D94B8400C91840 /* Cars.swift */; };
 		181BC59125D94F6000C91840 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC59025D94F6000C91840 /* DictionaryExtension.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		181BAE6625DDB8B400E73378 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		181BB21325DFDEE00080B88B /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		181BC57D25D9483200C91840 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		181BC58725D94B8400C91840 /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 		181BC59025D94F6000C91840 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				181BC5B125D9637300C91840 /* AllCarsInteractor.swift */,
 				18DA6A0725DA88FF0082B1A4 /* CarsDetailInteractor.swift */,
 				18DA6A1125DAAEC40082B1A4 /* DetailViewController.swift */,
+				181BB21325DFDEE00080B88B /* PersonDetailViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181BB21425DFDEE00080B88B /* PersonDetailViewController.swift in Sources */,
 				181BC5D225D9D76100C91840 /* CarDetail.swift in Sources */,
 				181BC59925D950D300C91840 /* CarsResponse.swift in Sources */,
 				181BC5B725D9647D00C91840 /* AllCarsCell.swift in Sources */,

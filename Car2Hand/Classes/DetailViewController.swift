@@ -8,7 +8,16 @@
 import UIKit
 import WebKit
 
+
+protocol UserInfoDelegate {
+    func didTapUserButton(phoneNumber: String, userName: String)
+}
+
+
 class DetailViewController: UIViewController {
+    
+    var delegate: UserInfoDelegate!
+    
 
     private var currentCar: Cars?
     private var detaylar : CarDetail?
@@ -24,7 +33,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
       
     }
@@ -32,9 +41,10 @@ class DetailViewController: UIViewController {
     
     
     @IBAction func ilansahibiClicked(_ sender: UIButton) {
-        
-        print("tıklandı")
+
+       
     }
+    
     @IBAction func locationBtnClicked(_ sender: UIButton) {
     }
     
@@ -43,11 +53,12 @@ class DetailViewController: UIViewController {
         self.currentCar = car
     }
     
+    
     func setupUI(){
+        
         if let car = currentCar {
             interactor.fetchDetails(of: car, completion: {
                 self.titleLabel.text = self.interactor.detail?.category?.name
-               // self.titleLabel.text = self.interactor.detail?.location?.cityName
                 self.carImage.setupImage(by: self.interactor.detail!.image![0], imageSize: "800x600")
                 self.priceLabel.text = String((self.interactor.detail?.fiyat!.formattedWithSeparator)!) + " TL"
                 
@@ -60,10 +71,16 @@ class DetailViewController: UIViewController {
                 let urlString = self.interactor.detail?.text
                 self.webView.loadHTMLString(urlString!, baseURL: nil)
             })
+            
         } else {
             print("girmedi :(")
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let selectVC = segue.destination as? PersonDetailViewController
+        selectVC?.name = (interactor.detail?.userInfo?.nameSurname)!
+        selectVC?.phone = (interactor.detail?.userInfo?.phone)!
+    }
     
 }
