@@ -8,21 +8,14 @@
 import UIKit
 import WebKit
 
-
-protocol UserInfoDelegate {
-    func didTapUserButton(phoneNumber: String, userName: String)
-}
-
-
 class DetailViewController: UIViewController {
-    
-    var delegate: UserInfoDelegate!
-    
 
     private var currentCar: Cars?
     private var detaylar : CarDetail?
     private var interactor : CarsDetailInteractor = CarsDetailInteractor()
     @IBOutlet weak var titleLabel: UILabel!
+
+   
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var modelLabel: UILabel!
@@ -37,15 +30,14 @@ class DetailViewController: UIViewController {
         setupUI()
       
     }
-    
-    
-    
+
     @IBAction func ilansahibiClicked(_ sender: UIButton) {
 
        
     }
     
     @IBAction func locationBtnClicked(_ sender: UIButton) {
+        
     }
     
     
@@ -59,9 +51,12 @@ class DetailViewController: UIViewController {
         if let car = currentCar {
             interactor.fetchDetails(of: car, completion: {
                 self.titleLabel.text = self.interactor.detail?.category?.name
+                
+                
                 self.carImage.setupImage(by: self.interactor.detail!.image![0], imageSize: "800x600")
                 self.priceLabel.text = String((self.interactor.detail?.fiyat!.formattedWithSeparator)!) + " TL"
-                
+      
+                // İNTERNET BAĞLANTISI OLMAYINCA !!!!
                 let motorWords = (self.interactor.detail?.model_ismi2?.wordList[1])! + "." + (self.interactor.detail?.model_ismi2?.wordList[2])! + " " + (self.interactor.detail?.model_ismi2?.wordList[3])!
                 
                 self.motorType.text = motorWords
@@ -84,3 +79,5 @@ class DetailViewController: UIViewController {
     }
     
 }
+
+

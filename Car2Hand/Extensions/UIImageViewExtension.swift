@@ -23,8 +23,10 @@ extension UIImageView {
         self.image = UIImage(data: response.data)
         return
     }
+        self.startActivityIndicator()
         session.dataTask(with: request, completionHandler: { (data, response, error) in
             
+            self.stopActivityIndicator()
             DispatchQueue.main.async {
                 if let data = data {
                     self.image = UIImage(data: data)

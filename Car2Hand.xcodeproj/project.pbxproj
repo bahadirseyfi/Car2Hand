@@ -22,6 +22,7 @@
 		181BC5C825D9A3B800C91840 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC5C725D9A3B800C91840 /* UIImageViewExtension.swift */; };
 		181BC5CD25D9A8B800C91840 /* FormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC5CC25D9A8B800C91840 /* FormatterExtension.swift */; };
 		181BC5D225D9D76100C91840 /* CarDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC5D125D9D76100C91840 /* CarDetail.swift */; };
+		18574C2925E112A300395784 /* CarImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18574C2825E112A300395784 /* CarImageCell.swift */; };
 		18888B7025D1D9920022A659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B6F25D1D9920022A659 /* AppDelegate.swift */; };
 		18888B7225D1D9920022A659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B7125D1D9920022A659 /* SceneDelegate.swift */; };
 		18888B7725D1D9920022A659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18888B7525D1D9920022A659 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		181BC5C725D9A3B800C91840 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		181BC5CC25D9A8B800C91840 /* FormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterExtension.swift; sourceTree = "<group>"; };
 		181BC5D125D9D76100C91840 /* CarDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetail.swift; sourceTree = "<group>"; };
+		18574C2825E112A300395784 /* CarImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarImageCell.swift; sourceTree = "<group>"; };
 		18888B6C25D1D9920022A659 /* Car2Hand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Car2Hand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18888B6F25D1D9920022A659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18888B7125D1D9920022A659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				181BC5B625D9647D00C91840 /* AllCarsCell.swift */,
+				18574C2825E112A300395784 /* CarImageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				18DA6A2025DC22360082B1A4 /* UIViewExtension.swift in Sources */,
 				18DA6A0825DA88FF0082B1A4 /* CarsDetailInteractor.swift in Sources */,
 				181BAE6725DDB8B400E73378 /* StringExtension.swift in Sources */,
+				18574C2925E112A300395784 /* CarImageCell.swift in Sources */,
 				18888B7225D1D9920022A659 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

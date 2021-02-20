@@ -25,9 +25,9 @@ class AllCarsCell: UITableViewCell {
 
         
     }
-    
+    //240x180
     func setupUI(for car: Cars) {
-        carImageView?.setupImage(by: car.image, imageSize: "240x180")
+        carImageView?.setupImage(by: car.image, imageSize: "800x600")
         carPriceLabel?.text = String(car.fiyat!.formattedWithSeparator) + "₺"
         titleLabel?.text = car.baslik
         locationLabel?.text = (car.location?.cityName)! + "," + (car.location?.townName)!

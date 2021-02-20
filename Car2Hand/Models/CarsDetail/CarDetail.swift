@@ -93,7 +93,6 @@ class CarCategory {
         ID = dictionary.decode(key: Keys.ID.rawValue)
         name = dictionary.decode(key: Keys.name.rawValue)
     }
-
     
 }
 

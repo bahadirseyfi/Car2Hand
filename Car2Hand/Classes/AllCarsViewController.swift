@@ -9,20 +9,24 @@ import UIKit
 
 class AllCarsViewController: UIViewController {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     private var interactor: AllCarsInteractor = AllCarsInteractor()
     private var page = 10
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var textFieldSearch: UITextField?
     
+    var pickerData: [String] = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUI()
+        
     }
     
     private func setupUI(){
         textFieldSearch?.addTarget(self, action: #selector(textFieldDidChanged(_:)), for: .editingChanged)
+        activityIndicator.startAnimating()
         interactor.fetchCars(page: page, completion: {
+            self.activityIndicator.stopAnimating()
             self.tableView?.reloadData()
         })
     }
