@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class AllCarsViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class AllCarsViewController: UIViewController {
     private var page = 10
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var textFieldSearch: UITextField?
+    @IBOutlet weak var headerUI: UIView!
     
     var pickerData: [String] = [String]()
     override func viewDidLoad() {
@@ -22,9 +24,11 @@ class AllCarsViewController: UIViewController {
         
     }
     
+    
     private func setupUI(){
         textFieldSearch?.addTarget(self, action: #selector(textFieldDidChanged(_:)), for: .editingChanged)
         activityIndicator.startAnimating()
+        
         interactor.fetchCars(page: page, completion: {
             self.activityIndicator.stopAnimating()
             self.tableView?.reloadData()
@@ -66,7 +70,17 @@ extension AllCarsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }
-
+    // For Stretchy Header
+   /*
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+       
+        let y = 200 - (scrollView.contentOffset.y + 200)
+        let h = max(60, y)
+        let rect = CGRect(x: 0, y: 0, width: view.bounds.width, height: h)
+        
+        headerUI.frame = rect
+    }
+*/
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
         if scrollView.contentOffset.y > scrollView.contentSize.height - scrollView.frame.height {
@@ -81,6 +95,7 @@ extension AllCarsViewController: UITableViewDelegate, UITableViewDataSource{
         }
     }
 }
+
 extension AllCarsViewController : UITextFieldDelegate {
     
     @objc func textFieldDidChanged(_ sender: UITextField) {

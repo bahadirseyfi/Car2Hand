@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import CoreLocation
 
 class DetailViewController: UIViewController {
 
@@ -14,7 +15,8 @@ class DetailViewController: UIViewController {
     private var detaylar : CarDetail?
     private var interactor : CarsDetailInteractor = CarsDetailInteractor()
     @IBOutlet weak var titleLabel: UILabel!
-
+    var coordinate: CLLocationCoordinate2D?
+    var adress: String = ""
    
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var webView: WKWebView!
@@ -28,7 +30,30 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-      
+        findingCoordinate()
+    }
+    
+    func findingCoordinate(){
+        guard let cityName = currentCar?.location?.cityName else { return }
+        guard let townName = currentCar?.location?.townName else { return }
+        
+        let adress = cityName + ", " + townName
+        self.adress = adress
+        
+        getCoordinateFrom(address: adress) { coordinate, error in
+            guard let coordinate = coordinate, error == nil else { return }
+            // don't forget to update the UI from the main thread
+            DispatchQueue.main.async {
+                //print(adress, "Location:", coordinate)
+                
+                self.coordinate = coordinate
+            }
+
+        }
+    }
+    
+    func getCoordinateFrom(address: String, completion: @escaping(_ coordinate: CLLocationCoordinate2D?, _ error: Error?) -> () ) {
+        CLGeocoder().geocodeAddressString(address) { completion($0?.first?.location?.coordinate, $1) }
     }
 
     @IBAction func ilansahibiClicked(_ sender: UIButton) {
@@ -43,6 +68,7 @@ class DetailViewController: UIViewController {
     
     func initialize(with car: Cars) {
         self.currentCar = car
+    
     }
     
     
@@ -71,11 +97,25 @@ class DetailViewController: UIViewController {
             print("girmedi :(")
         }
     }
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let y = 200 - (scrollView.contentOffset.y + 200)
+        let h = max(60, y)
+        let rect = CGRect(x: 0, y: 0, width: view.bounds.width, height: h)
+        
+        carImage.frame = rect
+    }
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toLocationVC" {
+            let vc = segue.destination as! PersonLocationViewController
+            vc.shared_coordinate = coordinate
+            vc.shared_city_town_name = adress
+        } else {
         let selectVC = segue.destination as? PersonDetailViewController
         selectVC?.name = (interactor.detail?.userInfo?.nameSurname)!
         selectVC?.phone = (interactor.detail?.userInfo?.phone)!
+        }
     }
     
 }

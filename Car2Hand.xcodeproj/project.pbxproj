@@ -30,6 +30,7 @@
 		18888B7C25D1D9930022A659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18888B7A25D1D9930022A659 /* LaunchScreen.storyboard */; };
 		18888B8725D1D9930022A659 /* Car2HandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B8625D1D9930022A659 /* Car2HandTests.swift */; };
 		18888B9225D1D9930022A659 /* Car2HandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B9125D1D9930022A659 /* Car2HandUITests.swift */; };
+		18C366E925EFFA750042EF0E /* PersonLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C366E825EFFA750042EF0E /* PersonLocationViewController.swift */; };
 		18DA69F225DA75DD0082B1A4 /* CarDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA69F125DA75DD0082B1A4 /* CarDetailRequest.swift */; };
 		18DA69FA25DA7CBF0082B1A4 /* CarDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA69F925DA7CBF0082B1A4 /* CarDetailResponse.swift */; };
 		18DA6A0825DA88FF0082B1A4 /* CarsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA6A0725DA88FF0082B1A4 /* CarsDetailInteractor.swift */; };
@@ -85,6 +86,7 @@
 		18888B8D25D1D9930022A659 /* Car2HandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Car2HandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18888B9125D1D9930022A659 /* Car2HandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car2HandUITests.swift; sourceTree = "<group>"; };
 		18888B9325D1D9930022A659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C366E825EFFA750042EF0E /* PersonLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonLocationViewController.swift; sourceTree = "<group>"; };
 		18DA69F125DA75DD0082B1A4 /* CarDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailRequest.swift; sourceTree = "<group>"; };
 		18DA69F925DA7CBF0082B1A4 /* CarDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailResponse.swift; sourceTree = "<group>"; };
 		18DA6A0725DA88FF0082B1A4 /* CarsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsDetailInteractor.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				18DA6A0725DA88FF0082B1A4 /* CarsDetailInteractor.swift */,
 				18DA6A1125DAAEC40082B1A4 /* DetailViewController.swift */,
 				181BB21325DFDEE00080B88B /* PersonDetailViewController.swift */,
+				18C366E825EFFA750042EF0E /* PersonLocationViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				181BC5AA25D9634A00C91840 /* AllCarsViewController.swift in Sources */,
 				18DA6A1225DAAEC40082B1A4 /* DetailViewController.swift in Sources */,
 				181BC59E25D9527100C91840 /* CarsWebServices.swift in Sources */,
+				18C366E925EFFA750042EF0E /* PersonLocationViewController.swift in Sources */,
 				181BC58825D94B8400C91840 /* Cars.swift in Sources */,
 				181BC5CD25D9A8B800C91840 /* FormatterExtension.swift in Sources */,
 				181BC59125D94F6000C91840 /* DictionaryExtension.swift in Sources */,
