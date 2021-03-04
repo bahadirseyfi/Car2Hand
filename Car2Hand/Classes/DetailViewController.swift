@@ -42,6 +42,7 @@ class DetailViewController: UIViewController {
         
         getCoordinateFrom(address: adress) { coordinate, error in
             guard let coordinate = coordinate, error == nil else { return }
+            
             // don't forget to update the UI from the main thread
             DispatchQueue.main.async {
                 //print(adress, "Location:", coordinate)

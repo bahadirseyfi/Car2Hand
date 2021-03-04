@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dbS-MW-jw6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tf4-Ri-DwX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -119,7 +120,7 @@
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                            <real key="value" value="1"/>
+                                                                            <real key="value" value="0.0"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                             <color key="value" red="0.22350105640000001" green="0.2431538701" blue="0.27447208760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -163,13 +164,13 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="0.0"/>
+                                                                <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="0.0"/>
+                                                                <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="value" red="0.14115634560000001" green="0.1411880553" blue="0.1411542892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -968,7 +969,10 @@
                                                     <constraint firstAttribute="width" constant="30" id="ROT-cT-RwY"/>
                                                     <constraint firstAttribute="height" constant="30" id="UA2-xH-002"/>
                                                 </constraints>
-                                                <state key="normal" image="send"/>
+                                                <color key="tintColor" red="0.76502269509999998" green="0.38336265089999999" blue="0.32207074759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="info.circle.fill" catalog="system" symbolScale="large"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="goLocationBtn:" destination="29X-sp-7oX" eventType="touchUpInside" id="dnm-hM-F7W"/>
                                                 </connections>
@@ -1029,6 +1033,102 @@
             </objects>
             <point key="canvasLocation" x="1318.840579710145" y="538.39285714285711"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Qr7-g6-5CG">
+            <objects>
+                <viewController id="tf4-Ri-DwX" customClass="HomeViewController" customModule="Car2Hand" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eur-5l-P29">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijv-1a-whu" userLabel="container">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBS-76-WTs" userLabel="header">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="luE-kg-a3t">
+                                        <rect key="frame" x="0.0" y="211" width="414" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A8O-OK-J5L">
+                                            <size key="itemSize" width="118" height="49"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GasPricesCell" id="TGt-1T-xGu" customClass="GasPricesCell" customModule="Car2Hand" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="86e-nY-zIA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="118" height="49"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Petrol Ofisi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06b-eK-7Zg">
+                                                            <rect key="frame" x="8" y="8" width="75.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benzin:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJ1-kK-3EC">
+                                                            <rect key="frame" x="8" y="30" width="39.5" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6.86" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6j-kr-Ic4">
+                                                            <rect key="frame" x="61.5" y="30" width="28.5" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="lJ1-kK-3EC" firstAttribute="top" secondItem="06b-eK-7Zg" secondAttribute="bottom" constant="1.5" id="1YL-z7-yLE"/>
+                                                        <constraint firstItem="06b-eK-7Zg" firstAttribute="top" secondItem="86e-nY-zIA" secondAttribute="top" constant="8" id="2dN-k7-7QO"/>
+                                                        <constraint firstItem="lJ1-kK-3EC" firstAttribute="leading" secondItem="86e-nY-zIA" secondAttribute="leading" constant="8" id="Cbo-TZ-sYi"/>
+                                                        <constraint firstItem="06b-eK-7Zg" firstAttribute="leading" secondItem="86e-nY-zIA" secondAttribute="leading" constant="8" id="aG9-lW-iRm"/>
+                                                        <constraint firstItem="B6j-kr-Ic4" firstAttribute="leading" secondItem="lJ1-kK-3EC" secondAttribute="trailing" constant="14" id="t4w-Rm-CGk"/>
+                                                        <constraint firstItem="B6j-kr-Ic4" firstAttribute="top" secondItem="06b-eK-7Zg" secondAttribute="bottom" constant="1.5" id="zlk-I6-NZy"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="118" height="49"/>
+                                                <connections>
+                                                    <outlet property="gasBrandLabel" destination="06b-eK-7Zg" id="gg5-d8-lVP"/>
+                                                    <outlet property="priceLabel" destination="B6j-kr-Ic4" id="VwE-ZY-gyA"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="NBS-76-WTs" firstAttribute="leading" secondItem="ijv-1a-whu" secondAttribute="leading" id="Fm5-h5-5yl"/>
+                                    <constraint firstAttribute="trailing" secondItem="NBS-76-WTs" secondAttribute="trailing" id="Qoj-yc-Kdu"/>
+                                    <constraint firstItem="NBS-76-WTs" firstAttribute="top" secondItem="ijv-1a-whu" secondAttribute="top" id="ji4-mY-gyZ"/>
+                                    <constraint firstItem="NBS-76-WTs" firstAttribute="height" secondItem="ijv-1a-whu" secondAttribute="height" multiplier="0.226562" id="ssi-wD-ojA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eEN-7E-wTh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ijv-1a-whu" firstAttribute="leading" secondItem="Eur-5l-P29" secondAttribute="leading" id="cJ8-gs-6pa"/>
+                            <constraint firstItem="ijv-1a-whu" firstAttribute="trailing" secondItem="Eur-5l-P29" secondAttribute="trailing" id="kW6-uT-xof"/>
+                            <constraint firstItem="ijv-1a-whu" firstAttribute="top" secondItem="Eur-5l-P29" secondAttribute="top" id="paf-cj-Vb6"/>
+                            <constraint firstAttribute="bottom" secondItem="ijv-1a-whu" secondAttribute="bottom" id="yl5-Io-zky"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="luE-kg-a3t" id="dN5-YJ-FKU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mi-sq-8k2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-849.27536231884062" y="-715.17857142857144"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="cfV-Ma-AId">
             <objects>
@@ -1051,15 +1151,18 @@
     <resources>
         <image name="cursorarrow.click" catalog="system" width="128" height="124"/>
         <image name="fener" width="1036" height="1013"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="location.fill.viewfinder" catalog="system" width="128" height="115"/>
         <image name="location.viewfinder" catalog="system" width="128" height="115"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
-        <image name="send" width="30" height="30"/>
         <image name="teletype.answer" catalog="system" width="128" height="89"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

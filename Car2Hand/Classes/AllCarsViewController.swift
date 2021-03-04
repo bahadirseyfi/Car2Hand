@@ -70,6 +70,10 @@ extension AllCarsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 5
+    }
     // For Stretchy Header
    /*
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

@@ -23,6 +23,9 @@
 		181BC5CD25D9A8B800C91840 /* FormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC5CC25D9A8B800C91840 /* FormatterExtension.swift */; };
 		181BC5D225D9D76100C91840 /* CarDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BC5D125D9D76100C91840 /* CarDetail.swift */; };
 		18574C2925E112A300395784 /* CarImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18574C2825E112A300395784 /* CarImageCell.swift */; };
+		187BC02F25F0F48500561E6F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC02E25F0F48500561E6F /* HomeViewController.swift */; };
+		187BC03C25F0FCB900561E6F /* GasPricesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC03B25F0FCB900561E6F /* GasPricesCell.swift */; };
+		187BC04225F0FE4000561E6F /* Gas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BC04125F0FE4000561E6F /* Gas.swift */; };
 		18888B7025D1D9920022A659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B6F25D1D9920022A659 /* AppDelegate.swift */; };
 		18888B7225D1D9920022A659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18888B7125D1D9920022A659 /* SceneDelegate.swift */; };
 		18888B7725D1D9920022A659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18888B7525D1D9920022A659 /* Main.storyboard */; };
@@ -73,6 +76,9 @@
 		181BC5CC25D9A8B800C91840 /* FormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterExtension.swift; sourceTree = "<group>"; };
 		181BC5D125D9D76100C91840 /* CarDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetail.swift; sourceTree = "<group>"; };
 		18574C2825E112A300395784 /* CarImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarImageCell.swift; sourceTree = "<group>"; };
+		187BC02E25F0F48500561E6F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		187BC03B25F0FCB900561E6F /* GasPricesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasPricesCell.swift; sourceTree = "<group>"; };
+		187BC04125F0FE4000561E6F /* Gas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gas.swift; sourceTree = "<group>"; };
 		18888B6C25D1D9920022A659 /* Car2Hand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Car2Hand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18888B6F25D1D9920022A659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18888B7125D1D9920022A659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 		181BC58625D94B6800C91840 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				187BC04025F0FE2600561E6F /* Gas */,
 				18DA6A0625DA88D90082B1A4 /* CarsDetail */,
 				181BC5D625D9DA7600C91840 /* Cars */,
 			);
@@ -160,6 +167,7 @@
 				18DA6A1125DAAEC40082B1A4 /* DetailViewController.swift */,
 				181BB21325DFDEE00080B88B /* PersonDetailViewController.swift */,
 				18C366E825EFFA750042EF0E /* PersonLocationViewController.swift */,
+				187BC02E25F0F48500561E6F /* HomeViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 			children = (
 				181BC5B625D9647D00C91840 /* AllCarsCell.swift */,
 				18574C2825E112A300395784 /* CarImageCell.swift */,
+				187BC03B25F0FCB900561E6F /* GasPricesCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -189,6 +198,14 @@
 				181BC5A225D95FFB00C91840 /* CarsRequest.swift */,
 			);
 			path = Cars;
+			sourceTree = "<group>";
+		};
+		187BC04025F0FE2600561E6F /* Gas */ = {
+			isa = PBXGroup;
+			children = (
+				187BC04125F0FE4000561E6F /* Gas.swift */,
+			);
+			path = Gas;
 			sourceTree = "<group>";
 		};
 		18888B6325D1D9920022A659 = {
@@ -389,7 +406,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				181BB21425DFDEE00080B88B /* PersonDetailViewController.swift in Sources */,
+				187BC03C25F0FCB900561E6F /* GasPricesCell.swift in Sources */,
 				181BC5D225D9D76100C91840 /* CarDetail.swift in Sources */,
+				187BC04225F0FE4000561E6F /* Gas.swift in Sources */,
 				181BC59925D950D300C91840 /* CarsResponse.swift in Sources */,
 				181BC5B725D9647D00C91840 /* AllCarsCell.swift in Sources */,
 				18DA69F225DA75DD0082B1A4 /* CarDetailRequest.swift in Sources */,
@@ -399,6 +418,7 @@
 				181BC59E25D9527100C91840 /* CarsWebServices.swift in Sources */,
 				18C366E925EFFA750042EF0E /* PersonLocationViewController.swift in Sources */,
 				181BC58825D94B8400C91840 /* Cars.swift in Sources */,
+				187BC02F25F0F48500561E6F /* HomeViewController.swift in Sources */,
 				181BC5CD25D9A8B800C91840 /* FormatterExtension.swift in Sources */,
 				181BC59125D94F6000C91840 /* DictionaryExtension.swift in Sources */,
 				18DA69FA25DA7CBF0082B1A4 /* CarDetailResponse.swift in Sources */,
