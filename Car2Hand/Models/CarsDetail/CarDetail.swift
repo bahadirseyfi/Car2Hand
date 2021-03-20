@@ -18,7 +18,7 @@ class CarDetail {
     var tarih_format: String?
     var image: [String?]?
     var category: CarCategory?
-   // var properties: [Properties?]?
+    var properties: [Properties] = []
     var text: String?
     var userInfo: UserInfo?
     
@@ -31,13 +31,21 @@ class CarDetail {
         case image = "photos"
         case location = "location"
         case category = "category"
-      //  case properties = "properties"
+        case properties = "properties"
         case text = "text"
         case userInfo = "userInfo"
     }
     
     required init?(dictionary: [String : Any]?) {
         guard let dictionary = dictionary else { return nil }
+        
+        if let properties: [[String:Any]] = dictionary.decode(key: Keys.properties.rawValue) {
+            for each in properties {
+                if let property = Properties(dictionary: each) {
+                    self.properties.append(property)
+                }
+            }
+        }
         
         ID = dictionary.decode(key: Keys.ID.rawValue)
         baslik = dictionary.decode(key: Keys.baslik.rawValue)
@@ -51,18 +59,15 @@ class CarDetail {
         if let dictionaryJSON = dictionary["userInfo"] as? [String:Any] {
             userInfo = UserInfo(dictionary: dictionaryJSON)
         }
-        if let dictionaryJSON2 = dictionary["location"] as? [String:Any] {
-            location = Location(dictionary: dictionaryJSON2)
+        if let dictionaryJSON1 = dictionary["location"] as? [String:Any] {
+            location = Location(dictionary: dictionaryJSON1)
         }
         if let dictionaryJSON2 = dictionary["category"] as? [String:Any] {
             category = CarCategory(dictionary: dictionaryJSON2)
         }
-       // if let dictionaryJSON3 = dictionary["properties"] as? [String:Any] {
-       //     properties = Properties(dictionary: dictionaryJSON3)
-       // }
     }
 }
-/*
+
 class Properties {
     
     var name : String?
@@ -72,14 +77,15 @@ class Properties {
         case name
         case value
     }
-    required init?(dictionary: [[String:Any]?]) {
-        guard let dictionary = dictionary else { return nil }
+    
+    required init?(dictionary: [String:Any]?) {
+       guard let dictionary = dictionary else { return nil }
         name = dictionary.decode(key: Keys.name.rawValue)
         value = dictionary.decode(key: Keys.value.rawValue)
         
     }
 }
-*/
+
 class CarCategory {
     var ID: Int?
     var name: String?
