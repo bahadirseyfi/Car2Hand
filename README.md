@@ -30,8 +30,10 @@ Used arabam.com API:
 
 
 ## Screenshoots
-![pagi2](https://user-images.githubusercontent.com/57216650/111876803-74662500-89b1-11eb-9ac6-e67ded507774.gif)
+
+
 ![home](https://user-images.githubusercontent.com/57216650/111876771-57315680-89b1-11eb-8e89-a7d0dd364cc3.gif)
 
+![detail](https://user-images.githubusercontent.com/57216650/111877322-df186000-89b3-11eb-9ef3-ffe7f173bcb6.gif)
 
 
